@@ -8,20 +8,28 @@
 
 body {
   background-color: #f2f2f2;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 main {
   margin: 6em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .section {
-  width: 344px;
+  width: 330px;
   margin: 0 auto;
 }
 
 .container {
   margin: 0 3em;
-  padding: 1em 0;
+  padding: 2em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +39,7 @@ main {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 500px;
+  height: 450px;
 }
 
 .container .image {
@@ -41,24 +49,25 @@ main {
 .container .header {
   font-family: "Big Shoulders Display", cursive;
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #f2f2f2;
 }
 
 .container .text {
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.8;
+  font-size: 0.9375rem;
 }
 
 .container .button {
   background-color: #f2f2f2;
   text-transform: capitalize;
-  padding: 1.25em;
-  width: 60%;
-  letter-spacing: 1px;
+  padding: 1.15em;
+  width: 70%;
   border-style: none;
   border-radius: 50px;
   cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .container .a {
@@ -71,10 +80,6 @@ main {
 
 .container .c {
   color: #004241;
-}
-
-body {
-  font-family: "Lexend Deca", sans-serif;
 }
 
 .one {
@@ -91,5 +96,48 @@ body {
   background-color: #004241;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+@media screen and (min-width: 980px) {
+  main {
+    height: 100vh;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section {
+    margin: 0;
+    width: 300px;
+    height: 500px;
+  }
+  .one {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+  .three {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+  .container {
+    padding-bottom: 0;
+    height: 475px;
+  }
+  .container .button {
+    margin-top: 3em;
+  }
+  .container .button:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 }
 /*# sourceMappingURL=style.css.map */

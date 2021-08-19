@@ -21,24 +21,27 @@ $font-text: "Lexend Deca", sans-serif;
 
 body {
   background-color: $neutral-grey;
+  font-family: $font-text;
 }
 
 main {
   margin: 6em 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .section {
-  width: 344px;
+  width: 330px;
   margin: 0 auto;
 }
 
 .container {
   margin: 0 3em;
-  padding: 1em 0;
+  padding: 2em 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 500px;
+  height: 450px;
 
   .image {
     width: 30%;
@@ -47,29 +50,26 @@ main {
   .header {
     font-family: $font-header;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: $neutral-grey;
   }
 
   .text {
     color: $neutral-trans-white;
     line-height: 1.8;
+    font-size: 0.9375rem;
   }
 
   .button {
     background-color: $neutral-grey;
     text-transform: capitalize;
-    padding: 1.25em;
-    width: 60%;
-    letter-spacing: 1px;
+    padding: 1.15em;
+    width: 70%;
     border-style: none;
     border-radius: 50px;
     cursor: pointer;
+    font-family: $font-text;
   }
-
-  // .button:hover {
-  //   background-color: $neutral-trans-white;
-  // }
 
   .a {
     color: $primary-orange;
@@ -82,10 +82,6 @@ main {
   .c {
     color: $primary-dark-cyan;
   }
-}
-
-body {
-  font-family: $font-text;
 }
 
 .one {
@@ -102,4 +98,44 @@ body {
   background-color: $primary-dark-cyan;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+@media screen and (min-width: 980px) {
+  main {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section {
+    margin: 0;
+    width: 300px;
+    height: 500px;
+  }
+
+  .one {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  .three {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+
+  .container {
+    padding-bottom: 0;
+    height: 475px;
+
+    .button {
+      margin-top: 3em;
+    }
+
+    .button:hover {
+      background-color: $neutral-trans-white;
+    }
+  }
 }
