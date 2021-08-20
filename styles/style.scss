@@ -135,6 +135,13 @@ main {
     }
 
     .button:hover {
+      background-color: transparent;
+      color: $neutral-grey;
+      border: 2px solid $neutral-grey;
+      transition: 0.2s;
+    }
+
+    .button:active {
       background-color: $neutral-trans-white;
     }
   }
